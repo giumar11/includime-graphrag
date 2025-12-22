@@ -2,6 +2,26 @@
 # minimal GraphRAG loader + routing demo
 import argparse, json, csv
 import networkx as nx
+import ast
+
+def parse_properties(raw, ctx=""):
+    if raw is None:
+        return {}
+    s = str(raw).strip()
+    if not s or s == "{}":
+        return {}
+
+    # 1) JSON valido
+    try:
+        return json.loads(s)
+    except json.JSONDecodeError:
+        # 2) fallback: dict stile Python con apici singoli, ecc.
+        try:
+            val = ast.literal_eval(s)
+            return val if isinstance(val, dict) else {"_value": val}
+        except Exception:
+            preview = s[:200].replace("\n", "\\n")
+            raise ValueError(f"Invalid properties in {ctx}: {preview}")
 
 def load_graph(nodes_path: str, edges_path: str) -> nx.MultiDiGraph:
     G = nx.MultiDiGraph()
@@ -10,7 +30,7 @@ def load_graph(nodes_path: str, edges_path: str) -> nx.MultiDiGraph:
             G.add_node(r["id"], **r)
     with open(edges_path, newline='', encoding='utf-8') as f:
         for r in csv.DictReader(f):
-            props = json.loads(r.get("properties") or "{}")
+            props = parse_properties(r.get("properties"), ctx=f"node_id={r.get('id')}")
             weight = float(r.get("weight") or 0)
             G.add_edge(r["src"], r["dst"], key=r["id"], rel=r["rel"], weight=weight, **props)
     return G
