@@ -1,6 +1,6 @@
 id,src,dst,rel,weight,properties
 e1,org_msc,svc_accoglienza,provides,1.0,"{}"
-e2,svc_cav,chn_cav_wp,has_channel,0.9,"{\"availability\":\"h24\"}"
+e2,svc_cav,chn_cav_wp,has_channel,0.9,"{"availability":"h24"}"
 e3,svc_cav,emg_1522,escalates_to,1.0,"{\"condition\":\"pericolo/violenza in corso\"}"
 e4,svc_cuav,emg_112,escalates_to,1.0,"{\"condition\":\"pericolo immediato\"}"
 e5,svc_disabilita,loc_palazzo_zanca,located_in,0.5,"{\"note\":\"sportello coordinamento\"}"
