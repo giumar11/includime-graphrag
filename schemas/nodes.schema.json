@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "nodes",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "organization",
+        "service",
+        "location",
+        "channel",
+        "taxonomy",
+        "policy",
+        "emergency"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "jurisdiction": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name"
+  ]
+}

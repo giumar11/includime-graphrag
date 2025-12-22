@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "edges",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "src": {
+      "type": "string"
+    },
+    "dst": {
+      "type": "string"
+    },
+    "rel": {
+      "type": "string",
+      "enum": [
+        "provides",
+        "located_in",
+        "refers_to",
+        "eligible_for",
+        "escalates_to",
+        "collaborates_with",
+        "governed_by",
+        "funded_by",
+        "has_channel",
+        "mapped_to"
+      ]
+    },
+    "weight": {
+      "type": "number"
+    },
+    "properties": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "src",
+    "dst",
+    "rel"
+  ]
+}
