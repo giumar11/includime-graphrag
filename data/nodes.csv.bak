@@ -1,0 +1,12 @@
+id,type,name,description,tags,url,jurisdiction,source
+org_msc,organization,Messina Social City,"Azienda speciale del Comune per servizi sociali","PA;coordinamento;welfare","https://www.messinasocialcity.it","Messina, IT","synthetic-v1"
+svc_cav,service,Centro Antiviolenza,"Ascolto, piano di sicurezza, invii sanitari/legali","antiviolenza;tutela","https://includime.messina.it/servizi/antiviolenza","Messina, IT","synthetic-v1"
+svc_cuav,service,CUAV,"Percorsi psico-educativi per autori di violenza","autori;giustizia;UEPE","","Messina, IT","synthetic-v1"
+svc_accoglienza,service,Accoglienza e reinserimento,"Alloggi temporanei, presa in carico sociale","accoglienza;housing","","Messina, IT","synthetic-v1"
+svc_disabilita,service,Disabilità e inclusione,"Assistenza scolastica, mobilità, centri diurni","disabilità;inclusione","","Messina, IT","synthetic-v1"
+svc_lavoro,service,Lavoro e tutele / CAF-INPS-INAIL,"Patronato, pratiche, vertenze","lavoro;CAF;INPS;INAIL","","Messina, IT","synthetic-v1"
+loc_palazzo_zanca,location,Palazzo Zanca,"Sede istituzionale","municipio","https://goo.gl/maps/placeholder","Messina, IT","synthetic-v1"
+emg_112,emergency,Emergenza 112,"Numero unico emergenze","emergenza","tel:112","IT","synthetic-v1"
+emg_1522,emergency,Violenza e stalking 1522,"Numero pubblico antiviolenza/stalking","antiviolenza","tel:1522","IT","synthetic-v1"
+chn_cav_wp,channel,WhatsApp CAV,"Canale messaggistica CAV","whatsapp","https://wa.me/39XXXXXXXXXX","Messina, IT","synthetic-v1"
+tax_pao,taxonomy,Pari Opportunità,"Tassonomia principale","PO;inclusione","","Messina, IT","synthetic-v1"
